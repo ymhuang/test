@@ -3,6 +3,7 @@ package main
 import (
     "fmt"
     "net/http"
+    "os"
 )
 
 func index( w http.ResponseWriter, req *http.Request) {
@@ -11,5 +12,9 @@ func index( w http.ResponseWriter, req *http.Request) {
 
 func main() {
     http.HandleFunc("/", index)
-    http.ListenAndServe("127.0.0.1:9999", nil)
+    fmt.Println("listening...")
+    err := http.ListenAndServe("127.0.0.1:9999", nil)
+    if err != nil {
+        panic(err)
+    }
 }
