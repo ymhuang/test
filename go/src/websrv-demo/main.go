@@ -3,7 +3,6 @@ package main
 import (
     "fmt"
     "net/http"
-    "os"
 )
 
 func index( w http.ResponseWriter, req *http.Request) {
