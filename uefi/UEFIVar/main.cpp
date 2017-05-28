@@ -1,7 +1,6 @@
 // UEFIVar.cpp : Defines the entry point for the console application.
 //
 
-//#include "stdafx.h"
 #include <Windows.h>
 
 static bool SetPrivilege( LPCTSTR privilegeName )
